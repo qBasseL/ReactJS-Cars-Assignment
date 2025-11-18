@@ -1,0 +1,47 @@
+.car-wrapper {
+  background-image: url("../assets/images/Frame-BSXj5G2V.png");
+  background-size: cover;
+}
+
+.car {
+  animation: zooming 1.5s linear;
+  transform-origin: center;
+}
+
+@keyframes zooming {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sliderTrack {
+    display: flex;
+    gap: 40px;
+    animation: smooth 2s linear infinite ;
+}
+
+
+@keyframes smooth {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    95% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    96% {
+        opacity: 0;       /* hide instantly before reset */
+    }
+    97% {
+        opacity: 0;
+        transform: translateX(100%); /* jump back to right side */
+    }
+    100% {
+        opacity: 1;       /* fade back in */
+    }
+}
