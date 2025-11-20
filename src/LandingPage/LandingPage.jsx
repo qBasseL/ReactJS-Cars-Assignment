@@ -35,7 +35,7 @@ export default function LandingPage() {
 
     return (
         <>
-            <div className='grid grid-cols-2 mt-15 gap-x-85'>
+            <div className='grid md:grid-cols-2 mt-15 gap-x-85'>
                 <div className='flex justify-center items-center'>
                     <div className=''>
                         <h2 className='text-5xl font-bold text-center'>Find, book and rent <br />a car <span className='text-blue-600'>Easily</span></h2>
@@ -62,7 +62,7 @@ export default function LandingPage() {
                 <h2 className='mt-10 text-4xl font-semibold'>
                     Most Popular Cars Rental Deals
                 </h2>
-                <div className="grid grid-cols-4 gap-4 my-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10">
                     {cars.map((car) => (
                         <Car key={car.id} data={car} />
                     ))}
